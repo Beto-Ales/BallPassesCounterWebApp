@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <script src="https://kit.fontawesome.com/3148d5cc20.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Passes Counter</title>
+</head>
+<body>
+    <!-- screens container -->
+    <div id="mainContainer">
+
+
+
+        <!-- screen 1 setup -->
+
+        
+        <div class="container screenHide" id="setupDiv">
+            <!-- title  -->        
+            <h1>BALL TOUCHES</h1>
+            <!-- ball icon -->
+            <i class="fas fa-futbol" id="ball"></i>
+            <!-- ask for the number of players -->
+            <h2 id="setUpH2">Number of Players</h2>
+            <div>
+                <input type="number" id="inNplayers">
+                <!-- set up the excercise -->
+                <!-- call the app -->
+                <button type="button" class="btn" id="btnNplayers">Next</button>
+                <!-- <input class="button" type="submit"> -->
+            </div>
+        </div>
+
+
+
+        <!-- screen 2 input player names -->
+
+
+        <div class="container screenHide" id="playersDiv">
+            <div id="nameInputDiv"></div>
+            <div id="btnDiv">
+                <button type="button" id="addBtn">Add Player</button>
+                <button type="button" id="dltBtn">Delete Player</button>
+                <!-- <button type="button" id="backBtn">Back</button> -->
+                <button type="button" id="nameRstBtn">Reset</button>
+                <button type="button" id="startBtn">Start</button>
+            </div>
+        </div>
+        
+        
+
+        <!-- screen 3 couples and rounds -->
+
+
+        <div class="container screenHide" id="roundsDiv">
+            <div id="roundBtnDiv">               
+                <button type="button" id="roundRstBtn">Reset</button>
+                <button type="button" id="nextRound">Next</button>                                
+            </div>
+            <div id="currentRoundDiv">
+                <!-- rounds title -->
+                <h2 id="roundH2"></h2>               
+            </div>
+        </div>
+        
+        
+
+        <!-- screen 4 final stats -->
+
+
+        <div class="container screenHide" id="statsDiv">
+            <div id="statsBtnDiv">
+                <button type="button" id="statsRstBtn">Reset</button>
+            </div>
+            <div id="coupleStats">
+                <h2>Couples</h2>
+            </div>
+            <div id="playerStats">
+                <h2>Players</h2>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    <script src="script.js"></script>
+    <!-- <script src="functions&buttons.js"></script> -->
+</body>
+</html>

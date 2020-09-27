@@ -1,0 +1,217 @@
+body{
+    /* display: flex;
+    justify-content: center; */
+    font-size: 1.5em;
+    text-align: center;
+    color: silver;
+    background-color: #162E58;    /*#dee2e8 another potion so we can see the ball*/
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+    font-family: 'Roboto Condensed', sans-serif;    
+}
+
+/* main container grid which contains all the screens*/
+#mainContainer{
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 0.1fr;
+}
+
+h1{
+    margin-top: 0;  
+}
+/* all but the h2 inside screen 1 */
+h2:not(#setUpH2){
+    color: #05c98a;
+    text-transform: capitalize;
+}
+
+p{
+    text-transform: capitalize;
+}
+
+strong{
+    color: goldenrod;
+}
+
+/* all the screens take the same parameters so they overlap */
+.container{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+/* there are 4 screens in this app */
+
+/* screen 1
+----------- */
+
+
+/* screen 1- this is the ball icon */
+#ball{
+    transform: scale(3);
+    padding: 1em;
+    color: rgb(5, 201, 138);    
+}
+
+/* screen 1- input to get the number of players */
+#inNplayers{
+    border-radius: 0.1em;
+    border: 0.125em solid /*rgb(5, 152, 201)*/rgb(5, 201, 138);
+    width: 3em;
+    text-align: center;
+    font-size: inherit;
+    border-right: none;
+    border-top-right-radius: 0em;
+    border-bottom-right-radius: 0em;
+}
+
+/* screen 1- button to get the number of players */
+#btnNplayers{
+    background-color: silver;
+    color: #162e58;
+    font-size: inherit;
+    border-radius: 0.1em;
+    border: 0.125em solid /*rgb(5, 152, 201)*/rgb(5, 201, 138);
+    width: 3em;
+    border-left: none;
+    border-top-left-radius: 0em;
+    border-bottom-left-radius: 0em;
+    margin-left: -0.3em;
+}
+
+/* screen 2- div */
+
+
+/* screen 2- all the content */
+#playersDiv *{
+    margin: 0.2em;
+    border-radius: 0.1em;
+    border: 0.125em solid /*rgb(5, 152, 201)*/#05c98a; 
+    text-align: center;
+    font-size: inherit;
+}
+
+/* screen 2- the two divs */
+#nameInputDiv, #btnDiv{    
+    display: flex;
+    flex-direction: column;
+    border: none;    
+}
+
+/* screen 2- this div displays the player names input */
+#nameInputDiv{        
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 3.5em;
+    width: 9em;
+}
+
+/* screen 2- this div groups all the buttons */
+/* the same for buttons inside screen 3 */
+#btnDiv, #roundBtnDiv{
+    display: flex;
+    flex-direction: row;    
+    position: fixed;    
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    max-width: 20em;
+    /* border: 3px solid goldenrod;     */
+}
+
+/* screen 2- all the buttons take these properties */
+#btnDiv *, #roundBtnDiv *{
+    border: 0.125em solid darkgoldenrod /*#05c98a*/;
+}
+
+/* screen 3 */
+
+/* round div container */
+#roundsDiv{
+    margin-top: 2em;
+}
+
+
+/* round grid */
+#currentRoundDiv{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: 40% 40% 20%;
+}
+
+/* passes input */
+#currentRoundDiv input{
+    margin: 0.2em;
+    border-radius: 0.1em;
+    border: 0.125em solid /*rgb(5, 152, 201)*/#05c98a; 
+    width: 2em;
+}
+
+/* header displaying the number of rounds */
+#roundH2{
+    grid-column: 1/4;
+    grid-row: 1;
+}
+
+/* all the elements */
+#roundsDiv *{
+    margin: 0.2em;
+    border-radius: 0.1em;
+    text-align: center;
+    font-size: inherit;
+}
+
+/* screen 4 */
+
+#statsRstBtn{
+    border: 0.125em solid darkgoldenrod;
+    border-radius: 0.1em;
+    font-size: inherit;
+}
+
+
+
+
+/* screen transition 
+--------------------*/
+
+/* hidden */
+.screenHide{
+    opacity: 0;
+    z-index: 4;            
+}
+
+/* visible */
+.screenShow{
+    opacity: 1;
+    z-index: 5;  
+    transition: 1s;
+}
+
+
+
+/* rotation transition
+---------------------- */
+
+
+.down{
+    transform: translateY(1.9em);
+    transition: all 0.5s linear;
+}
+
+.right{
+    /* transform: translateX(9.3em); */
+    transform: translateX(100%);
+    transition: all 0.5s linear;
+}
+
+.left{
+    /* transform: translateX(-9.3em); */
+    transform: translateX(-100%);
+    transition: all 0.5s linear;
+}
+
+.up{
+    transform: translateY(-1.9em);
+    transition: all 0.5s linear;
+}
+
